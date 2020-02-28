@@ -108,6 +108,7 @@
 
     @mixin atMedium {
       display: block;
+      opacity: 1;
       z-index: 1;
       padding-top: 0;
       transform: scale(1);
