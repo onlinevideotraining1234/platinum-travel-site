@@ -57,7 +57,7 @@ if (currentTask == "dev") {
     path: path.resolve(__dirname, "app")
   };
 
-  config.devServer = {
+  (config.devServer = {
     before: function(app, server) {
       server._watch("./app/**/*.html");
     },
@@ -65,7 +65,8 @@ if (currentTask == "dev") {
     hot: true,
     port: 3000,
     host: "0.0.0.0"
-  }((config.mode = "development"));
+  }),
+    (config.mode = "development");
 }
 
 if (currentTask == "build") {
